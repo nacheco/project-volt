@@ -10,7 +10,7 @@ const Hero = () => {
         <h1 className={styles.heroHeading}>
           Minimalist, Fast,
           <br />
-          Reliable, and <span>Secure 👁‍🗨</span>
+          Reliable, and <span>Secured👁‍🗨</span>
           <br />
           Video Conferencing
         </h1>
