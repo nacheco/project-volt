@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --main-font: #000;
   --highlight: #F33636;
@@ -6,7 +8,7 @@
   --background: #ffffff;
 }
 
-html, body {
+html, body, button {
   font-size: 62.5%;
   padding: 0;
   margin: 0;
@@ -17,9 +19,13 @@ html, body {
 a {
   color: inherit;
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
+Link {
+  font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,101 @@
+.container {
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25em;
+}
+
+.heroHeading {
+    font-size: 10rem;
+    font-weight: 500;
+    letter-spacing: -.3rem;
+    line-height: 12rem;
+    margin-bottom: 3rem;
+}
+
+.heroHeading span {
+    color: var(--highlight);
+}
+.heroDescription {
+    margin-top: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -.2rem;
+}
+
+.heroButtons {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.heroButtons span {
+    font-size: 1.5rem;
+}
+
+.createBtn {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    justify-content: space-evenly;
+    width: 45%;
+    background: var(--main-font);
+    border: none;
+    border-radius: .5rem;
+    padding: 1.2rem 1rem;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+}
+
+.createBtn:hover {
+    background: var(--highlight);
+}
+
+.gitBtn {
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--highlight);
+    padding: .9rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.gitBtn:hover {
+    background-color: var(--l-highlight);
+}
+
+.trustedBy {
+    margin-top: 7rem;    
+}
+
+.trustedBy span{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.trustedBy ul {
+    list-style: none; 
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.trustedBy li {
+    display: inline-block;
+    padding-right: 2rem;
+}
+.more {
+    font-size: 1rem;
+    color: var(--l-font);
+}
