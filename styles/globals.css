@@ -1,3 +1,14 @@
+:root {
+  --main-font: #000;
+  --highlight: #F33636;
+  --l-highlight: #F66F6F;
+  --l-font: #808080;
+  --background: #ffffff;
+}
+
+
+
+
 html,
 body {
   padding: 0;
