@@ -100,6 +100,18 @@
     color: var(--l-font);
 }
 
+@media all and (min-width: 1280px) and (max-width: 1770px) {
+    .heroHeading {
+        font-size: 7.5rem;
+    }
+    .heroButtons {
+        width: 60%;
+    }
+    .right {
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .container {
         padding: 0 3rem;
@@ -108,16 +120,11 @@
         font-size: 6.2rem;
         line-height: 8rem;
     }
-    .heroButtons {
-        width: 60%;
-    }
-    .right {
-        width: 50%;
-    }
     .left {
         padding: 0; 
     }
 }
+
 
 @media all and (min-width: 1024px) and (max-width: 1280px) { 
     .heroButtons {
