@@ -43,3 +43,14 @@
 .tryBtn:hover {
     background: var(--l-highlight);
 }
+@media all and (min-width: 480px) and (max-width: 745px) {
+    .list {
+        display: none;
+    }
+}
+@media all and (max-width: 480px) { 
+    .list {
+        display: none;
+    }
+}
+

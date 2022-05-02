@@ -99,3 +99,86 @@
     font-size: 1rem;
     color: var(--l-font);
 }
+
+@media screen and (max-width: 1440px) {
+    .container {
+        padding: 0 3rem;
+    }
+    .heroHeading {
+        font-size: 6.2rem;
+        line-height: 8rem;
+    }
+    .heroButtons {
+        width: 60%;
+    }
+    .right {
+        width: 50%;
+    }
+    .left {
+        padding: 0; 
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    .heroButtons {
+        width: 100%;
+    }
+    .heroButtons span {
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .heroHeading {
+        font-size: 5.5rem;
+        line-height: 7rem;
+        width: 19ch;
+    }
+    .heroDescription {
+        font-size: 1.9rem;
+    }
+    .heroButtons {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: baseline;
+        height: 100vh;
+    }
+    .right {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+ }
+
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .heroHeading {
+        font-size: 5.7rem;
+        line-height: 6rem;    
+    }
+    
+    .left {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .right {
+        width: 100%;
+        margin-bottom: 15rem;
+    }
+
+}
+
+
+@media all and (max-width: 480px) {
+    .right {
+        display: none;
+    }
+    .left {
+        width: 100%;
+    }
+    .heroButtons {
+        width: 100%;
+    }
+ }
