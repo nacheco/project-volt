@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '600px',
+    width: '1000px',
     border: '2px solid black',
 
     [theme.breakpoints.down('xs')]: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
     width: '100%',
   },
 }))
