@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 10rem;
+    column-gap: 5rem;
 }
 
 .myScreen,
@@ -91,6 +91,13 @@
     font-size: 1.8rem;
 }
 
+.aText:focus,
+.cText:focus {
+    outline: none;
+    border-bottom: black solid 2px;
+}
+
+
 .aBtn,
 .cBtn {
     margin-top: 1rem;
@@ -112,3 +119,170 @@
     font-weight: 500;
 }
 
+@media all and (min-width: 1440px) and (max-width: 2559px) {
+    .myScreen,
+    .userScreen {
+        height: 60rem;
+        width: 50rem;
+    }
+}
+
+@media all and (min-width: 1240px) and (max-width: 1440px) { 
+    .screens {
+        column-gap: 2rem;
+    }
+    .myScreen,
+    .userScreen {
+        height: 60rem;
+        width: 40rem;
+    }
+
+    .list {
+        font-size: 1.8rem;
+    }
+
+  }
+@media all and (min-width: 1024px) and (max-width: 1240px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .screens {
+        column-gap: 2rem;
+        height: fit-content;
+    }
+    .myScreen,
+    .userScreen {
+        margin-top: 3rem;
+        align-self: flex-start;
+        width: 45rem;
+    }
+
+    .list {
+        font-size: 1.5rem;
+    }
+    .sideMenu {
+        row-gap: 1rem;
+    }
+    .accountInfo,
+    .makeACall {
+        height: fit-content;
+        width: 75vw;
+    }
+ }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    .screens {
+        column-gap: 2rem;
+        height: fit-content;
+    }
+    .myScreen,
+    .userScreen {
+        margin-top: 3rem;
+        align-self: flex-start;
+        height: 50rem;
+        width: 36rem;
+    }
+
+    .list {
+        font-size: 1.5rem;
+    }
+    .sideMenu {
+        row-gap: 1rem;
+    }
+    .accountInfo,
+    .makeACall {
+        height: fit-content;
+        width: 75vw;
+    }
+ }
+ 
+@media all and (min-width: 640px) and (max-width: 768px) { 
+    .container {
+        flex-direction: column;
+    }
+    .screens {
+        column-gap: 2rem;
+        height: fit-content;
+    }
+    .myScreen,
+    .userScreen {
+        margin-top: 3rem;
+        align-self: flex-start;
+        width: 30rem;
+        height: 45rem;
+    }
+
+    .list {
+        font-size: 1.5rem;
+    }
+    .sideMenu {
+        row-gap: 1rem;
+    }
+    .accountInfo,
+    .makeACall {
+        height: fit-content;
+        width: 90vw;
+    }
+}
+@media all and (min-width: 480px) and (max-width: 640px) {
+    .container {
+        flex-direction: column;
+    }
+    .screens {
+        column-gap: 2rem;
+        height: fit-content;
+    }
+    .myScreen,
+    .userScreen {
+        margin-top: 3rem;
+        align-self: flex-start;
+        width: 25rem;
+        height: 42rem;
+    }
+
+    .list {
+        font-size: 1.5rem;
+    }
+    .sideMenu {
+        row-gap: 1rem;
+    }
+    .accountInfo,
+    .makeACall {
+        height: fit-content;
+        width: 90vw;
+    }
+
+}
+@media all and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+    .screens {
+        flex-direction: column;
+        column-gap: 2rem;
+        height: fit-content;
+    }
+    .myScreen,
+    .userScreen {
+        margin-top: 3rem;
+        align-self: flex-start;
+        height: 50rem;
+        width: 35rem;
+    }
+
+    .list {
+        font-size: 1.5rem;
+    }
+    .sideMenu {
+        row-gap: 1rem;
+    }
+    .accountInfo,
+    .makeACall {
+        height: fit-content;
+        width: 90vw;
+    }
+ }

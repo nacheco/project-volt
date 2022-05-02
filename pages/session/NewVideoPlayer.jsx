@@ -5,21 +5,6 @@ import Image from "next/image";
 const NewVideoPlayer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.screens}>
-        <div className={styles.myScreen}>
-          <div className={styles.essentials}>
-            <span className={styles.name}>You</span>
-            <button className={styles.hangBtn}>
-              <Image src="/images/phone.svg" alt="" width={40} height={40} />
-            </button>
-          </div>
-        </div>
-        <div className={styles.userScreen}>
-          <div className={styles.essentials}>
-            <span className={styles.name}>Recipient</span>
-          </div>
-        </div>
-      </div>
       <div className={styles.sideMenu}>
         <div className={styles.accountInfo}>
           <label className={styles.aLabel}>
@@ -62,6 +47,21 @@ const NewVideoPlayer = () => {
           <button className={styles.cBtn} type="submit">
             Call Recipient
           </button>
+        </div>
+      </div>
+      <div className={styles.screens}>
+        <div className={styles.myScreen}>
+          <div className={styles.essentials}>
+            <span className={styles.name}>You</span>
+            <button className={styles.hangBtn}>
+              <Image src="/images/phone.svg" alt="" width={40} height={40} />
+            </button>
+          </div>
+        </div>
+        <div className={styles.userScreen}>
+          <div className={styles.essentials}>
+            <span className={styles.name}>Recipient</span>
+          </div>
         </div>
       </div>
     </div>
