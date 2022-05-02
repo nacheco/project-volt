@@ -1,0 +1,114 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.screens {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+}
+
+.myScreen,
+.userScreen {
+    border-radius: 2rem;
+    background-color: var(--l-font);
+    height: 80rem;
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.sideMenu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.accountInfo {
+    border: black solid 1px;
+    border-radius: 2rem;
+    width: 40rem;
+    height: 60rem;
+}
+
+.makeACall {
+    border-radius: 2rem;
+    border: black solid 1px;
+    width: 40rem;
+    height: 20rem;
+}
+
+.essentials {
+    display: flex;
+    font-size: 3rem;
+    padding: 3rem;
+    justify-content: space-between;
+}
+
+.name {
+    align-self: flex-end;
+    background: #fff;
+    height: fit-content;
+    padding: .2rem 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hangBtn {
+    align-self: flex-end;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--highlight);
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.accountInfo,
+.makeACall {
+    padding: 3rem;
+}
+
+.aLabel,
+.cLabel {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    row-gap: 1rem;
+}
+
+.aText,
+.cText {
+    border: none;
+    border-bottom: black solid 1px;
+    font-size: 1.8rem;
+}
+
+.aBtn,
+.cBtn {
+    margin-top: 1rem;
+    background: var(--highlight);
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: black solid 3px;
+    border-radius: .5rem;
+}
+
+.cBtn {
+    background: #5FFF8D;
+}
+
+.list {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
