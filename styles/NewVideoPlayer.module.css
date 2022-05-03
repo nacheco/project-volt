@@ -17,7 +17,7 @@
 .userScreen {
     border-radius: 2rem;
     background-color: var(--l-font);
-    height: 80rem;
+    height: fit-content;
     width: 70rem;
     display: flex;
     flex-direction: column;
@@ -48,12 +48,12 @@
 .essentials {
     display: flex;
     font-size: 3rem;
-    padding: 3rem;
+    padding: 1rem;
     justify-content: space-between;
 }
 
 .name {
-    align-self: flex-end;
+    align-self: center;
     background: #fff;
     height: fit-content;
     padding: .2rem 2rem;
@@ -122,12 +122,12 @@
 .video {
     width: 100%;
     height: 100%;
+    border-radius: 2rem 2rem 0 0;
 }
 
 @media all and (min-width: 1440px) and (max-width: 2559px) {
     .myScreen,
     .userScreen {
-        height: 60rem;
         width: 50rem;
     }
 }
@@ -138,7 +138,6 @@
     }
     .myScreen,
     .userScreen {
-        height: 60rem;
         width: 40rem;
     }
 
@@ -188,7 +187,6 @@
     .userScreen {
         margin-top: 3rem;
         align-self: flex-start;
-        height: 50rem;
         width: 36rem;
     }
 
@@ -218,7 +216,6 @@
         margin-top: 3rem;
         align-self: flex-start;
         width: 30rem;
-        height: 45rem;
     }
 
     .list {
@@ -246,7 +243,6 @@
         margin-top: 3rem;
         align-self: flex-start;
         width: 25rem;
-        height: 42rem;
     }
 
     .list {
@@ -275,7 +271,6 @@
     .userScreen {
         margin-top: 3rem;
         align-self: flex-start;
-        height: 50rem;
         width: 35rem;
     }
 

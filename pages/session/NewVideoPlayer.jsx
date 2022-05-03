@@ -36,7 +36,7 @@ const NewVideoPlayer = () => {
           <ol className={styles.list}>
             <h1>Instructions:</h1>
             <li>Enter a name</li>
-            <li>Click &#39Generate & Copy ID&#39</li>
+            <li>Click "Generate & Copy ID"</li>
             <li>
               Paste code below & click the button to call <span>yourself</span>
             </li>
@@ -76,7 +76,7 @@ const NewVideoPlayer = () => {
             <div className={styles.essentials}>
               <span className={styles.name}>{name || "You"}</span>
               <button className={styles.hangBtn}>
-                <Image src="/images/phone.svg" alt="" width={40} height={40} />
+                <Image src="/images/phone.svg" alt="" width={22} height={22} />
               </button>
             </div>
           </div>
