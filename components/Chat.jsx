@@ -1,10 +1,7 @@
 import React from "react";
-import styles from "../styles/Chat.module.css";
-
-import VideoPlayer from "./VideoPlayer";
 import Options from "./Options";
 import Notifications from "./Notifications";
-import NewVideoPlayer from "../pages/session/NewVideoPlayer";
+import NewVideoPlayer from "./NewVideoPlayer";
 
 const Chat = () => {
   return (

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import styles from "../../styles/NewVideoPlayer.module.css";
+import styles from "../styles/NewVideoPlayer.module.css";
 import Image from "next/image";
 
-import { SocketContext } from "../../SocketContext";
+import { SocketContext } from "../SocketContext";
 
 const NewVideoPlayer = () => {
   const {
