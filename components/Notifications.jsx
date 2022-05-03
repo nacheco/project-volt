@@ -1,24 +1,28 @@
-import React, { useContext } from 'react'
-import { Button } from '@material-ui/core';
+import React, { useContext } from "react";
+import { Button } from "@material-ui/core";
 
-
-import { SocketContext } from '../SocketContext';
+import { SocketContext } from "../SocketContext";
+import { Height } from "@material-ui/icons";
 
 const Notifications = () => {
   const { answerCall, call, callAccepted } = useContext(SocketContext);
 
   return (
     <>
-    {call.isReceivedCall && !callAccepted && (
-      <div style={{ display: 'flex', justifyContent: 'center'}}>
-        <h1>{call.name} is calling: </h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          height: "30vh",
+        }}
+      >
+        <h1>{call.name} is calling:</h1>
         <Button variant="contained" color="primary" onClick={answerCall}>
           Answer
         </Button>
       </div>
-    )}
     </>
-  )
-}
+  );
+};
 
-export default Notifications
+export default Notifications;

@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href="https://www.natepacheco.dev/#contact">Contact</Link>
           </li>
         </ul>
-        <Link href="/" passHref>
+        <Link href="/session/video" passHref>
           <button className={styles.tryBtn}>Try Now</button>
         </Link>
       </nav>

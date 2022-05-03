@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/NewVideoPlayer.module.css";
 import Image from "next/image";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 import { SocketContext } from "../SocketContext";
 
-const NewVideoPlayer = () => {
+const NewVideoPlayer = ({ children }) => {
   const {
+    me,
     name,
+    setName,
+    leaveCall,
+    callUser,
     callAccepted,
     callRejected,
     callCancelled,
@@ -16,6 +21,7 @@ const NewVideoPlayer = () => {
     myVideo,
     userVideo,
   } = useContext(SocketContext);
+  const [idToCall, setIdToCall] = useState("");
 
   return (
     <div className={styles.container}>
@@ -24,15 +30,21 @@ const NewVideoPlayer = () => {
           <label className={styles.aLabel}>
             Account Info:
             <input
+              label="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className={styles.aText}
               type="text"
               name="name"
               placeholder="Name..."
             />
           </label>
-          <button className={styles.aBtn} type="submit">
-            Generate & Copy ID
-          </button>
+
+          <CopyToClipboard text={me}>
+            <button className={styles.aBtn} type="submit">
+              Generate & Copy ID
+            </button>
+          </CopyToClipboard>
           <ol className={styles.list}>
             <h1>Instructions:</h1>
             <li>Enter a name</li>
@@ -47,10 +59,14 @@ const NewVideoPlayer = () => {
             <li>Give your code to a friend and have them call you.</li>
           </ul>
         </div>
+
         <div className={styles.makeACall}>
           <label className={styles.cLabel}>
             Make A Call:
             <input
+              label="ID to call"
+              value={idToCall}
+              onChange={(e) => setIdToCall(e.target.value)}
               className={styles.cText}
               type="text"
               name="name"
@@ -75,9 +91,18 @@ const NewVideoPlayer = () => {
             />
             <div className={styles.essentials}>
               <span className={styles.name}>{name || "You"}</span>
-              <button className={styles.hangBtn}>
-                <Image src="/images/phone.svg" alt="" width={22} height={22} />
-              </button>
+
+              {callAccepted &&
+                !callEnded(
+                  <button className={styles.hangBtn} onClick={leaveCall}>
+                    <Image
+                      src="/images/phone.svg"
+                      alt=""
+                      width={22}
+                      height={22}
+                    />
+                  </button>
+                )}
             </div>
           </div>
         )}
@@ -96,6 +121,7 @@ const NewVideoPlayer = () => {
           </div>
         )}
       </div>
+      {children}
     </div>
   );
 };
