@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../../styles/NewVideoPlayer.module.css";
 import Image from "next/image";
 
+import { SocketContext } from "../../SocketContext";
+
 const NewVideoPlayer = () => {
+  const {
+    name,
+    callAccepted,
+    callRejected,
+    callCancelled,
+    callEnded,
+    stream,
+    call,
+    myVideo,
+    userVideo,
+  } = useContext(SocketContext);
+
   return (
     <div className={styles.container}>
       <div className={styles.sideMenu}>
@@ -19,11 +33,10 @@ const NewVideoPlayer = () => {
           <button className={styles.aBtn} type="submit">
             Generate & Copy ID
           </button>
-
           <ol className={styles.list}>
             <h1>Instructions:</h1>
             <li>Enter a name</li>
-            <li>Click "Generate & Copy ID"</li>
+            <li>Click &#39Generate & Copy ID&#39</li>
             <li>
               Paste code below & click the button to call <span>yourself</span>
             </li>
@@ -49,20 +62,39 @@ const NewVideoPlayer = () => {
           </button>
         </div>
       </div>
+      {/* Screens */}
       <div className={styles.screens}>
-        <div className={styles.myScreen}>
-          <div className={styles.essentials}>
-            <span className={styles.name}>You</span>
-            <button className={styles.hangBtn}>
-              <Image src="/images/phone.svg" alt="" width={40} height={40} />
-            </button>
+        {/* My Screen */}
+        {stream && (
+          <div className={styles.myScreen}>
+            <video
+              playsInline
+              ref={myVideo}
+              autoPlay
+              className={styles.video}
+            />
+            <div className={styles.essentials}>
+              <span className={styles.name}>{name || "You"}</span>
+              <button className={styles.hangBtn}>
+                <Image src="/images/phone.svg" alt="" width={40} height={40} />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className={styles.userScreen}>
-          <div className={styles.essentials}>
-            <span className={styles.name}>Recipient</span>
+        )}
+        {/* User's Screen */}
+        {callAccepted && !callEnded && (
+          <div className={styles.userScreen}>
+            <video
+              playsInline
+              ref={userVideo}
+              autoPlay
+              className={styles.video}
+            />
+            <div className={styles.essentials}>
+              <span className={styles.name}>{call.name || "Recipient"}</span>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
