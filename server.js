@@ -1,6 +1,16 @@
-const app = require("express")();
+const express = require('express');
+const next = require('next');
+const dev = process.env.NODE_ENV !== 'production';
+
+const app = next({ dev })
+
+
 const server = require("http").createServer(app);
+
+
 const cors = require("cors");
+
+
 
 const io = require("socket.io")(server, {
   cors: {
