@@ -51,7 +51,7 @@ const NewVideoPlayer = ({ children }) => {
           <ol className={styles.list}>
             <h1>Instructions:</h1>
             <li>Enter a name</li>
-            <li>Click "Generate & Copy ID"</li>
+            <li>Click Generate & Copy ID</li>
             <li>
               Paste code below & click the button to call <span>yourself</span>
             </li>
@@ -85,7 +85,13 @@ const NewVideoPlayer = ({ children }) => {
       <div className={styles.screens}>
         {/* My Screen */}
         <div className={styles.myScreen}>
-          <video playsInline ref={myVideo} autoPlay className={styles.video} />
+          <video
+            playsInline
+            ref={myVideo}
+            autoPlay
+            muted
+            className={styles.video}
+          />
           <div className={styles.essentials}>
             <span className={styles.name}>{name || "You"}</span>
             <button className={styles.hangBtn} onClick={leaveCall}>
