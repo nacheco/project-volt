@@ -27,6 +27,9 @@ const NewVideoPlayer = ({ children }) => {
     <div className={styles.container}>
       <div className={styles.sideMenu}>
         <div className={styles.accountInfo}>
+          <span className={styles.warning}>
+            WARNING: Server is Currently Offline.
+          </span>
           <label className={styles.aLabel}>
             Account Info:
             <input
@@ -36,12 +39,12 @@ const NewVideoPlayer = ({ children }) => {
               className={styles.aText}
               type="text"
               name="name"
-              placeholder="Name..."
+              placeholder="Enter Your Name..."
             />
           </label>
 
           <CopyToClipboard text={me}>
-            <button className={styles.aBtn} type="submit">
+            <button className={styles.aBtn} type="submit" disabled>
               Generate & Copy ID
             </button>
           </CopyToClipboard>
@@ -73,7 +76,7 @@ const NewVideoPlayer = ({ children }) => {
               placeholder="Enter Recipients ID..."
             />
           </label>
-          <button className={styles.cBtn} type="submit">
+          <button className={styles.cBtn} type="submit" disabled>
             Call Recipient
           </button>
         </div>
@@ -81,45 +84,29 @@ const NewVideoPlayer = ({ children }) => {
       {/* Screens */}
       <div className={styles.screens}>
         {/* My Screen */}
-        {stream && (
-          <div className={styles.myScreen}>
-            <video
-              playsInline
-              ref={myVideo}
-              autoPlay
-              className={styles.video}
-            />
-            <div className={styles.essentials}>
-              <span className={styles.name}>{name || "You"}</span>
+        <div className={styles.myScreen}>
+          <video playsInline ref={myVideo} autoPlay className={styles.video} />
+          <div className={styles.essentials}>
+            <span className={styles.name}>{name || "You"}</span>
+            <button className={styles.hangBtn} onClick={leaveCall}>
+              <Image src="/images/phone.svg" alt="" width={22} height={22} />
+            </button>
+          </div>
+        </div>
 
-              {callAccepted &&
-                !callEnded(
-                  <button className={styles.hangBtn} onClick={leaveCall}>
-                    <Image
-                      src="/images/phone.svg"
-                      alt=""
-                      width={22}
-                      height={22}
-                    />
-                  </button>
-                )}
-            </div>
-          </div>
-        )}
         {/* User's Screen */}
-        {callAccepted && !callEnded && (
-          <div className={styles.userScreen}>
-            <video
-              playsInline
-              ref={userVideo}
-              autoPlay
-              className={styles.video}
-            />
-            <div className={styles.essentials}>
-              <span className={styles.name}>{call.name || "Recipient"}</span>
-            </div>
+
+        <div className={styles.userScreen}>
+          <video
+            playsInline
+            ref={userVideo}
+            autoPlay
+            className={styles.video}
+          />
+          <div className={styles.essentials}>
+            <span className={styles.name}>{call.name || "Recipient"}</span>
           </div>
-        )}
+        </div>
       </div>
       {children}
     </div>
