@@ -74,11 +74,10 @@ const Hero = () => {
           </ul>
         </div>
       </div>
-
       <div className={styles.right}>
         <div className={styles.heroImage}>
           <Image
-            src="/images/hero-img.webp"
+            src="/images/hero-img.png"
             alt="hero"
             width={1105}
             height={804}
