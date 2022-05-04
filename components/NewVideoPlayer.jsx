@@ -85,7 +85,6 @@ const NewVideoPlayer = ({ children }) => {
       <div className={styles.screens}>
         {/* My Screen */}
         <div className={styles.myScreen}>
-<<<<<<< HEAD
           <video
             playsInline
             ref={myVideo}
@@ -93,9 +92,6 @@ const NewVideoPlayer = ({ children }) => {
             muted
             className={styles.video}
           />
-=======
-          <video playsInline ref={myVideo} autoPlay muted className={styles.video} />
->>>>>>> caffc83af027bd3f324897878105a873b4b93c8c
           <div className={styles.essentials}>
             <span className={styles.name}>{name || "You"}</span>
             <button className={styles.hangBtn} onClick={leaveCall}>
