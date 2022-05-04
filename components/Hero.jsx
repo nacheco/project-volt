@@ -76,12 +76,7 @@ const Hero = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.heroImage}>
-          <Image
-            src="/images/Hero-Img.webp"
-            alt="hero"
-            width={1105}
-            height={804}
-          />
+          <Image src="/images/hero.png" alt="hero" width={1105} height={804} />
         </div>
       </div>
     </div>
